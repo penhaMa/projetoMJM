@@ -1,6 +1,6 @@
 ﻿namespace projetoMJM
 {
-    partial class ExcluirProjeto
+    partial class Financeiro
     {
         /// <summary>
         /// Required designer variable.
@@ -28,68 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.Sair = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // Sair
+            // 
+            this.Sair.BackColor = System.Drawing.Color.Tomato;
+            this.Sair.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sair.Location = new System.Drawing.Point(388, 296);
+            this.Sair.Margin = new System.Windows.Forms.Padding(4);
+            this.Sair.Name = "Sair";
+            this.Sair.Size = new System.Drawing.Size(257, 44);
+            this.Sair.TabIndex = 35;
+            this.Sair.Text = "Sair";
+            this.Sair.UseVisualStyleBackColor = false;
+            // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightCoral;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(423, 414);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(388, 196);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 44);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(416, 240);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(423, 42);
-            this.textBox1.TabIndex = 28;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(191, 244);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 35);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Nome do Projeto";
+            this.button1.Size = new System.Drawing.Size(257, 44);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Adicionar Valor";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(500, 85);
+            this.label1.Location = new System.Drawing.Point(428, 71);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 35);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Excluir";
+            this.label1.Size = new System.Drawing.Size(166, 35);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Financeiro";
             // 
-            // ExcluirProjeto
+            // Financeiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 534);
+            this.Controls.Add(this.Sair);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximumSize = new System.Drawing.Size(1046, 581);
             this.MinimumSize = new System.Drawing.Size(1046, 581);
-            this.Name = "ExcluirProjeto";
-            this.Text = "ExcluirProjeto";
+            this.Name = "Financeiro";
+            this.Text = "Financeiro";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,9 +87,8 @@
 
         #endregion
 
+        private System.Windows.Forms.Button Sair;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }
 }

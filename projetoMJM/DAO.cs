@@ -10,6 +10,5 @@ namespace projetoMJM
     class DAO
     {
         
-        
     }
 }
