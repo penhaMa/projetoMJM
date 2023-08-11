@@ -12,11 +12,13 @@ namespace projetoMJM
 {
     public partial class Form1 : Form
     {
+        DAO conectar;
         Login log;
         public Form1()
         {
             InitializeComponent();
             log= new Login();
+            conectar =new DAO();
         }
 
         private void label1_Click(object sender, EventArgs e)

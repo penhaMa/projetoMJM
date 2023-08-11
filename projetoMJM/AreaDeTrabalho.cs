@@ -14,7 +14,7 @@ namespace projetoMJM
     {
         AdicionarProjeto cada;
         ExcluirProjeto exc;
-        Gerenciador gere;
+        Atualizar gere;
         Tarefa tare;
         Buscar bus;
         public AreaDeTrabalho()
@@ -22,7 +22,7 @@ namespace projetoMJM
             InitializeComponent();
             cada = new AdicionarProjeto();
             exc = new ExcluirProjeto();
-            gere= new Gerenciador();
+            gere= new Atualizar();
             tare= new Tarefa();
             bus = new Buscar();
         }

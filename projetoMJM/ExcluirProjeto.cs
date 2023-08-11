@@ -12,17 +12,24 @@ namespace projetoMJM
 {
     public partial class ExcluirProjeto : Form
     {
+        DAO exc;
         
         public ExcluirProjeto()
         {
             InitializeComponent();
+            exc = new DAO();
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void excluir_Click(object sender, EventArgs e)
         {
-            
-        }//Voltar a Área de Trabalho
+            string result = exc.Excluir(Convert.ToInt32(codigo.Text), "projeto");
+            MessageBox.Show(result);
+        }//Excluir
 
+        private void codigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }//Fim da Classe
 }//Fim do Projeto
