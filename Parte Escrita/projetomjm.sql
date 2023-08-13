@@ -14,7 +14,12 @@ create table projeto(
     integrante varchar(150) not null
 )engine=innodb; 
 
-select * from projeto where codigo = 2;
+create table entrar(
+    login varchar(150) not null,
+    senha varchar(150) not null
+)engine=innodb; 
+
+select * from entrar;
 
 delete from projeto where codigo = 1;
 

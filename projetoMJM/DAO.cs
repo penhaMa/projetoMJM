@@ -101,5 +101,13 @@ namespace projetoMJM
             return resultado;
         }//fim do método
 
+        public string Cadastrar(string login, string senha, string nomeTabela)
+        {
+            string cadastrar = $"Insert into {nomeTabela}(login, senha) values('{login}','{senha}')";
+            MySqlCommand sql = new MySqlCommand(cadastrar, conexao);
+            string resultado = sql.ExecuteNonQuery() + " Executado";
+            return resultado;
+        }
+
     }//Fim de Classe
 }//Fim do Projeto

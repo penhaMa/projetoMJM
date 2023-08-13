@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace projetoMJM
 {
-    public partial class Form1 : Form
+    public partial class Cadastrar : Form
     {
         DAO conectar;
         Login log;
-        public Form1()
+        public Cadastrar()
         {
             InitializeComponent();
             log= new Login();
@@ -28,6 +29,16 @@ namespace projetoMJM
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string result = conectar.Cadastrar(login.Text, senha.Text, "entrar"); ;
+                MessageBox.Show(result);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Algo deu errado!\n\n" + erro.Message);
+            }//Fim do try catch
+
             log.ShowDialog();
         }//Cadastrar
 
@@ -36,5 +47,14 @@ namespace projetoMJM
             Application.Exit();
         }// Sair
 
+        private void login_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void senha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }//Fim da Classe
 }//Fim do Projeto
