@@ -44,17 +44,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.codigo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // adicionar
             // 
+            this.adicionar.BackColor = System.Drawing.Color.Gold;
             this.adicionar.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adicionar.Location = new System.Drawing.Point(323, 385);
             this.adicionar.Name = "adicionar";
             this.adicionar.Size = new System.Drawing.Size(146, 36);
             this.adicionar.TabIndex = 12;
             this.adicionar.Text = "Adicionar";
-            this.adicionar.UseVisualStyleBackColor = true;
+            this.adicionar.UseVisualStyleBackColor = false;
             this.adicionar.Click += new System.EventHandler(this.adicionar_Click);
             // 
             // tipo
@@ -200,11 +203,24 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Código do Projeto";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::projetoMJM.Properties.Resources.MicrosoftTeams_image__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(674, 366);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdicionarProjeto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 442);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.codigo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.integrante);
@@ -226,6 +242,7 @@
             this.Name = "AdicionarProjeto";
             this.Text = "CadastroProjeto";
             this.Load += new System.EventHandler(this.AdicionarProjeto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +265,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox codigo;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

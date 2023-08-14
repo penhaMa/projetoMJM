@@ -21,7 +21,23 @@ create table entrar(
 
 select * from entrar;
 
+select * from bancoTarefa;
+
+drop table bancoTarefa;
+
 delete from projeto where codigo = 1;
 
 select * from entrar where login = 'Penha' and senha = 123;
+
+create table bancoTarefa(
+	codigo int primary key auto_increment not null,
+    integrante varchar(150) not null,
+    tarefa varchar(150) not null,
+    stat varchar(150) not null,
+    prazo varchar (10) not null
+)engine=innodb;
+
+
+
+
 

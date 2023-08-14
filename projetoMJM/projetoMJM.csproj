@@ -152,6 +152,12 @@
     <Compile Include="Tarefa.Designer.cs">
       <DependentUpon>Tarefa.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaTarefa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaTarefa.Designer.cs">
+      <DependentUpon>TelaTarefa.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AreaDeTrabalho.resx">
       <DependentUpon>AreaDeTrabalho.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,9 +187,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Tarefa.resx">
       <DependentUpon>Tarefa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaTarefa.resx">
+      <DependentUpon>TelaTarefa.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -198,6 +208,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftTeams-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftTeams-image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftTeams-image %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

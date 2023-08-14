@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace projetoMJM
 {
     public partial class Login : Form
     {
+        Cadastrar cad;
         DAO conectar;
         AreaDeTrabalho areaL;
         public Login()
@@ -20,30 +22,25 @@ namespace projetoMJM
             InitializeComponent();
             areaL = new AreaDeTrabalho();
             conectar = new DAO();
+            cad = new Cadastrar();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
-            try
+            conectar.Acessar(login1.Text, senha1.Text, "entrar");
+            for (int i = 0; i < conectar.QuatidadeDados(); i++)
             {
-                conectar.Acessar(login1.Text, senha1.Text, "projeto");
-                for (int i = 0; i < conectar.QuatidadeDados(); i++)
+                if (login1.Text == conectar.login[i] & senha1.Text == conectar.senha[i])
                 {
-                    if(conectar.login[i] == login1.Text || conectar.senha[i] == senha1.Text);
-                    {
-                        MessageBox.Show("Login Bem sucedido");
-                    }
-
-                }//Adicionando dados no dataGridView1
+                    MessageBox.Show("Login Bem sucedido");
+                    areaL.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Login ou Senha Incorretos");
+                }
             }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Login ou senha incorretos!\n\n" + erro.Message);
-            }//Fim do try catch
-        
-
-            areaL.ShowDialog();
         }//Entrar
 
         private void button2_Click(object sender, EventArgs e)
@@ -60,6 +57,11 @@ namespace projetoMJM
         {
 
         }//Senha
+
+        private void cadastrar_Click(object sender, EventArgs e)
+        {
+            cad.ShowDialog();
+        }//Cadastrar
 
     }//Fim da Classe
 }//Fim do projeto

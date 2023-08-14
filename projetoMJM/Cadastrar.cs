@@ -14,12 +14,11 @@ namespace projetoMJM
     public partial class Cadastrar : Form
     {
         DAO conectar;
-        Login log;
+        
         public Cadastrar()
         {
             InitializeComponent();
-            log= new Login();
-            conectar =new DAO();
+            conectar = new DAO();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,7 +38,6 @@ namespace projetoMJM
                 MessageBox.Show("Algo deu errado!\n\n" + erro.Message);
             }//Fim do try catch
 
-            log.ShowDialog();
         }//Cadastrar
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,6 +51,11 @@ namespace projetoMJM
         }
 
         private void senha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cadastrar_Load(object sender, EventArgs e)
         {
 
         }

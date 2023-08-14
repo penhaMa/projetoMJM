@@ -22,6 +22,10 @@ namespace projetoMJM
         public string[] integrante;
         public string[] login;
         public string[] senha;
+        public string[] tarefa;
+        public string[] integrante1;
+        public string[] stat;
+        public string[] prazo;
         public int i;
         public int contador;
 
@@ -48,7 +52,7 @@ namespace projetoMJM
             return resultado;
         }//Fim da inserir
 
-        //Método de Consulta
+        //Método de Busca
         public void PreencherVetor(int codigo, string nomeTabela)
         {
             string query = $"Select * from {nomeTabela} where codigo = '{codigo}'";
@@ -60,6 +64,7 @@ namespace projetoMJM
             this.orcamento = new double[100];
             this.statu = new string[100];
             this.integrante = new string[100];
+           
 
             //Preparar o comando
             MySqlCommand sql = new MySqlCommand(query, conexao);
@@ -142,7 +147,49 @@ namespace projetoMJM
             //Encerrando a comunicasão
             leitura.Close();
         }
-        
+
+        public string CadastrarTarefa(string codigo, string integrante, string tarefa ,string stat, DateTime prazo, string nomeTabela)
+        {
+            string cadastrar = $"Insert into {nomeTabela}(codigo, integrante, tarefa, stat, prazo) values('{codigo}','{integrante}','{tarefa}','{stat}','{prazo}')";
+            MySqlCommand sql = new MySqlCommand(cadastrar, conexao);
+            string resultado = sql.ExecuteNonQuery() + " Executado";
+            return resultado;
+        }
+
+        //Método de Busca
+        public void PreencherTarefa(int codigo, string nomeTabela)
+        {
+            string query = $"Select * from {nomeTabela} where codigo = '{codigo}'";
+
+            //Instanciar
+            this.integrante1 = new string[100];
+            this.tarefa = new string[100];
+            this.stat = new string[100];
+            this.prazo = new string [100];
+
+
+            //Preparar o comando
+            MySqlCommand sql = new MySqlCommand(query, conexao);
+
+            //Leitor
+            MySqlDataReader leitura = sql.ExecuteReader();
+
+            i = 0;
+            contador = 0;
+            while (leitura.Read())
+            {
+                integrante1[i] = leitura["integrante"] + "";
+                tarefa[i] = leitura["tarefa"] + "";
+                stat[i] = leitura["stat"] + "";
+                prazo[i] = leitura["prazo"] + "";
+                i++;
+                contador++;
+            }//Fim do while
+
+            //Encerrando a comunicaxão
+            leitura.Close();
+        }//Fim do método
+
 
     }//Fim de Classe
 }//Fim do Projeto
