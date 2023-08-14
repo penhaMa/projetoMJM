@@ -19,10 +19,5 @@ namespace projetoMJM
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-        }//Voltar para Area de Trabalho
-
     }//Fim da classe
 }//Fim do projeto

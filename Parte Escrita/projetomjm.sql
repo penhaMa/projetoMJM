@@ -23,3 +23,5 @@ select * from entrar;
 
 delete from projeto where codigo = 1;
 
+select * from entrar where login = 'Penha' and senha = 123;
+

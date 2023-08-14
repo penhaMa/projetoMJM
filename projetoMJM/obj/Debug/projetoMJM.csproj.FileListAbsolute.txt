@@ -36,7 +36,6 @@ C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.csproj.Su
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.AreaDeTrabalho.resources
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.AdicionarProjeto.resources
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.ExcluirProjeto.resources
-C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Form1.resources
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Login.resources
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Buscar.resources
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Properties.Resources.resources
@@ -102,3 +101,4 @@ C:\Users\penha\source\repos\projetoMJM\projetoMJM\bin\Debug\Microsoft.Bcl.AsyncI
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\bin\Debug\MySql.Data.xml
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\bin\Debug\System.IO.Pipelines.xml
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Atualizar.resources
+C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Cadastrar.resources

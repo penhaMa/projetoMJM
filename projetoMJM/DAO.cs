@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +20,8 @@ namespace projetoMJM
         public double[] orcamento;
         public string[] statu;
         public string[] integrante;
+        public string[] login;
+        public string[] senha;
         public int i;
         public int contador;
 
@@ -108,6 +113,36 @@ namespace projetoMJM
             string resultado = sql.ExecuteNonQuery() + " Executado";
             return resultado;
         }
+
+        public void Acessar(string verificaLogin, string verificaSenha, string nomeTabela)
+        {
+            string acessar = $"select * from {nomeTabela} where login = '{verificaLogin}' and senha = '{verificaSenha}'";
+
+            //Instanciar
+            this.login = new string[100];
+            this.senha = new string[100];
+
+            //Preparar o comando
+            MySqlCommand sql = new MySqlCommand(acessar, conexao);
+
+            //Leitor
+            MySqlDataReader leitura = sql.ExecuteReader();
+            
+
+            i = 0;
+            contador = 0;
+            while (leitura.Read())
+            {
+                login[i] = leitura["login"] + "";
+                senha[i] = leitura["senha"] + "";
+                i++;
+                contador++;
+            }//Fim do while
+
+            //Encerrando a comunicasão
+            leitura.Close();
+        }
+        
 
     }//Fim de Classe
 }//Fim do Projeto
