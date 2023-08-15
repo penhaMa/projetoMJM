@@ -17,8 +17,7 @@ namespace projetoMJM
         public ExcluirProjeto()
         {
             InitializeComponent();
-            exc = new DAO();
-            
+            exc = new DAO();//Conecta com a DAO
         }
 
         private void excluir_Click(object sender, EventArgs e)
@@ -30,6 +29,7 @@ namespace projetoMJM
         private void codigo_TextChanged(object sender, EventArgs e)
         {
 
-        }
+        }//Codigo
+
     }//Fim da Classe
 }//Fim do Projeto

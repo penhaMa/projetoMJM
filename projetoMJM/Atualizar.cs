@@ -16,7 +16,7 @@ namespace projetoMJM
         public Atualizar()
         {
             InitializeComponent();
-            atu = new DAO();
+            atu = new DAO();//Conecta com a DAO
         }
 
         private void nome_TextChanged(object sender, EventArgs e)
@@ -51,18 +51,19 @@ namespace projetoMJM
 
         private void button3_Click(object sender, EventArgs e)
         {
-            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "nome", nome.Text);//Atualizo o nome
-            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "tipo", tipo.Text);
-            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "descricao", descricao.Text);
-            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "orcamento", orcamento.Text);
-            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "statu", status.Text);
-            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "integrante", integrante.Text);
-            MessageBox.Show("Dados Atualizados com Sucesso!");
+            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "nome", nome.Text);//Atualiza o nome
+            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "tipo", tipo.Text);//Atualiza o tipo
+            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "descricao", descricao.Text);//Atualiza a descrição
+            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "orcamento", orcamento.Text);//Atualiza o orçamento
+            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "statu", status.Text);//Atualiza o status
+            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "integrante", integrante.Text);//Atualiza o integrante
+            MessageBox.Show("Dados Atualizados com Sucesso!");//Mensagem para o úsuario 
         }
 
         private void codigo_TextChanged(object sender, EventArgs e)
         {
 
-        }
+        }//Código
+
     }//Fim da Classe
 }//Fim do Projeto

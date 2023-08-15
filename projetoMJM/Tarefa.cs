@@ -16,7 +16,7 @@ namespace projetoMJM
         public Tarefa()
         {
             InitializeComponent();
-            cone = new DAO();
+            cone = new DAO();//Conecta a DAO
         }
 
         private void codigo_TextChanged(object sender, EventArgs e)
@@ -48,11 +48,13 @@ namespace projetoMJM
         {
             try
             {
+                //Adiciona dados
                 string result = cone.CadastrarTarefa(codigo.Text, integrante.Text, tarefa1.Text, status.Text, Convert.ToDateTime(prazo.Text), "bancoTarefa");
                 MessageBox.Show(result);
             }
             catch (Exception erro)
             {
+                //Mensagem de Erro
                 MessageBox.Show("Algo deu errado!\n\n" + erro.Message);
             }//Fim do try catch
 
@@ -61,6 +63,7 @@ namespace projetoMJM
         private void Tarefa_Load(object sender, EventArgs e)
         {
 
-        }
+        }//Fundo da tela
+
     }//Fim da classe
 }//Fim do projeto

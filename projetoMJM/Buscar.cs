@@ -17,20 +17,20 @@ namespace projetoMJM
         public Buscar()
         {
             consul = new DAO();
-            InitializeComponent();
-            ConfigurarDataGrid();
+            InitializeComponent();//Instancia os componentes
+            ConfigurarDataGrid();//Configura o DataGrid
             NomeColunas();//Nomear os títulos das colunas  
-            tar = new TelaTarefa();
+            tar = new TelaTarefa();//Conecta com a tela de tarefas
         }
 
         public void NomeColunas()
         {
-            dataGridView1.Columns[0].Name = "Nome";
-            dataGridView1.Columns[1].Name = "Tipo";
-            dataGridView1.Columns[2].Name = "Descrição";
-            dataGridView1.Columns[3].Name = "Orçamento";
-            dataGridView1.Columns[4].Name = "Status";
-            dataGridView1.Columns[5].Name = "Integrante";
+            dataGridView1.Columns[0].Name = "Nome";//Adiciona um nome a coluna 0
+            dataGridView1.Columns[1].Name = "Tipo";//Adiciona um nome a coluna 1
+            dataGridView1.Columns[2].Name = "Descrição";//Adiciona um nome a coluna 2
+            dataGridView1.Columns[3].Name = "Orçamento";//Adiciona um nome a coluna 3
+            dataGridView1.Columns[4].Name = "Status";//Adiciona um nome a coluna 4
+            dataGridView1.Columns[5].Name = "Integrante";//Adiciona um nome a coluna 5
 
         }//Fim do método consultar
 
@@ -41,7 +41,7 @@ namespace projetoMJM
             dataGridView1.AllowUserToResizeColumns = false;//Redimensionar Colunas
             dataGridView1.AllowUserToResizeRows = false;//Redimensionar Linhas
 
-            dataGridView1.ColumnCount = 6;
+            dataGridView1.ColumnCount = 6;//Número de Colunas
         }
 
         public void AdicionarDados()
@@ -61,12 +61,12 @@ namespace projetoMJM
         private void label2_Click(object sender, EventArgs e)
         {
 
-        }
+        }//Label
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
+        }//DataGrid
 
         private void button1_Click(object sender, EventArgs e)
         {

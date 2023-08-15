@@ -18,23 +18,25 @@ namespace projetoMJM
         public Cadastrar()
         {
             InitializeComponent();
-            conectar = new DAO();
+            conectar = new DAO();//Conecta com a DAO
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
+        }//Label
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+                //Adiciona Dados
                 string result = conectar.Cadastrar(login.Text, senha.Text, "entrar"); ;
                 MessageBox.Show(result);
             }
             catch (Exception erro)
             {
+                //Mostra se der Erro
                 MessageBox.Show("Algo deu errado!\n\n" + erro.Message);
             }//Fim do try catch
 
@@ -48,16 +50,17 @@ namespace projetoMJM
         private void login_TextChanged(object sender, EventArgs e)
         {
 
-        }
+        }//Login
 
         private void senha_TextChanged(object sender, EventArgs e)
         {
 
-        }
+        }//Senha
 
         private void Cadastrar_Load(object sender, EventArgs e)
         {
 
-        }
+        }//Cadastrar
+
     }//Fim da Classe
 }//Fim do Projeto

@@ -103,3 +103,4 @@ C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Atualizar
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Cadastrar.resources
 C:\Users\marcel.rmpenha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Cadastrar.resources
 C:\Users\marcel.rmpenha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.TelaTarefa.resources
+C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.TelaTarefa.resources

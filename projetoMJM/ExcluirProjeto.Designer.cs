@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcluirProjeto));
             this.excluir = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,9 +41,10 @@
             // 
             this.excluir.BackColor = System.Drawing.Color.Gold;
             this.excluir.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.excluir.Location = new System.Drawing.Point(317, 336);
+            this.excluir.Location = new System.Drawing.Point(423, 414);
+            this.excluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.excluir.Name = "excluir";
-            this.excluir.Size = new System.Drawing.Size(146, 36);
+            this.excluir.Size = new System.Drawing.Size(195, 44);
             this.excluir.TabIndex = 29;
             this.excluir.Text = "Excluir";
             this.excluir.UseVisualStyleBackColor = false;
@@ -51,9 +53,10 @@
             // codigo
             // 
             this.codigo.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigo.Location = new System.Drawing.Point(312, 195);
+            this.codigo.Location = new System.Drawing.Point(416, 240);
+            this.codigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codigo.Name = "codigo";
-            this.codigo.Size = new System.Drawing.Size(318, 35);
+            this.codigo.Size = new System.Drawing.Size(423, 42);
             this.codigo.TabIndex = 28;
             this.codigo.TextChanged += new System.EventHandler(this.codigo_TextChanged);
             // 
@@ -61,9 +64,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(375, 69);
+            this.label1.Location = new System.Drawing.Point(500, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 29);
+            this.label1.Size = new System.Drawing.Size(115, 35);
             this.label1.TabIndex = 26;
             this.label1.Text = "Excluir";
             // 
@@ -71,9 +75,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(137, 198);
+            this.label2.Location = new System.Drawing.Point(183, 244);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 29);
+            this.label2.Size = new System.Drawing.Size(214, 35);
             this.label2.TabIndex = 30;
             this.label2.Text = "Código do Projeto";
             // 
@@ -82,25 +87,28 @@
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::projetoMJM.Properties.Resources.MicrosoftTeams_image__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(674, 366);
+            this.pictureBox1.Location = new System.Drawing.Point(899, 450);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 99);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
             // ExcluirProjeto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 440);
+            this.ClientSize = new System.Drawing.Size(1027, 532);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.excluir);
             this.Controls.Add(this.codigo);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(788, 479);
-            this.MinimumSize = new System.Drawing.Size(788, 479);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1045, 579);
+            this.MinimumSize = new System.Drawing.Size(1045, 579);
             this.Name = "ExcluirProjeto";
             this.Text = "ExcluirProjeto";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

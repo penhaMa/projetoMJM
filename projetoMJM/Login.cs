@@ -20,9 +20,9 @@ namespace projetoMJM
         public Login()
         {
             InitializeComponent();
-            areaL = new AreaDeTrabalho();
-            conectar = new DAO();
-            cad = new Cadastrar();
+            areaL = new AreaDeTrabalho();//Conecta a Area de Trabalho
+            conectar = new DAO();//Conecta a DAO
+            cad = new Cadastrar();//Conecta a Cadastrar
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,16 +31,16 @@ namespace projetoMJM
             conectar.Acessar(login1.Text, senha1.Text, "entrar");
             for (int i = 0; i < conectar.QuatidadeDados(); i++)
             {
-                if (login1.Text == conectar.login[i] & senha1.Text == conectar.senha[i])
+                if (login1.Text == conectar.login[i] & senha1.Text == conectar.senha[i])//Verifica o login e a senha já cadastrado no banco de dados
                 {
-                    MessageBox.Show("Login Bem sucedido");
+                    MessageBox.Show("Login Bem sucedido");//Se der certo mostra essa mensagem 
                     areaL.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Login ou Senha Incorretos");
+                    MessageBox.Show("Login ou Senha Incorretos");//Se der errado mostra essa mensagem 
                 }
-            }
+            }//Fim do Método Login
         }//Entrar
 
         private void button2_Click(object sender, EventArgs e)

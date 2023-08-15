@@ -20,11 +20,11 @@ namespace projetoMJM
         public AreaDeTrabalho()
         {
             InitializeComponent();
-            cada = new AdicionarProjeto();
-            exc = new ExcluirProjeto();
-            gere= new Atualizar();
-            tare= new Tarefa();
-            bus = new Buscar();
+            cada = new AdicionarProjeto();//Conecta com a Adicionar Projeto
+            exc = new ExcluirProjeto();//Conecta com a Excluir Projeto
+            gere = new Atualizar();//Conecta com a Atualizar Projeto
+            tare = new Tarefa();//Conecta com a Adicionar Tarefa
+            bus = new Buscar();//Conecta com a Buscar
         }
 
         private void button1_Click(object sender, EventArgs e)

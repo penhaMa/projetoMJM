@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscar));
             this.button1 = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,9 +44,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(246, 358);
+            this.button1.Location = new System.Drawing.Point(328, 441);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 36);
+            this.button1.Size = new System.Drawing.Size(195, 44);
             this.button1.TabIndex = 25;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = false;
@@ -54,9 +56,10 @@
             // codigo
             // 
             this.codigo.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigo.Location = new System.Drawing.Point(334, 85);
+            this.codigo.Location = new System.Drawing.Point(445, 105);
+            this.codigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codigo.Name = "codigo";
-            this.codigo.Size = new System.Drawing.Size(318, 35);
+            this.codigo.Size = new System.Drawing.Size(423, 42);
             this.codigo.TabIndex = 24;
             this.codigo.TextChanged += new System.EventHandler(this.codigo_TextChanged);
             // 
@@ -64,9 +67,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(165, 88);
+            this.label2.Location = new System.Drawing.Point(220, 108);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 29);
+            this.label2.Size = new System.Drawing.Size(214, 35);
             this.label2.TabIndex = 23;
             this.label2.Text = "Código do Projeto";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -75,18 +79,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(387, 34);
+            this.label1.Location = new System.Drawing.Point(516, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 29);
+            this.label1.Size = new System.Drawing.Size(117, 35);
             this.label1.TabIndex = 22;
             this.label1.Text = "Buscar";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(170, 141);
+            this.dataGridView1.Location = new System.Drawing.Point(227, 174);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(482, 195);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(643, 240);
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -95,9 +102,10 @@
             this.tarefa.BackColor = System.Drawing.Color.Black;
             this.tarefa.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tarefa.ForeColor = System.Drawing.Color.White;
-            this.tarefa.Location = new System.Drawing.Point(418, 358);
+            this.tarefa.Location = new System.Drawing.Point(557, 441);
+            this.tarefa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tarefa.Name = "tarefa";
-            this.tarefa.Size = new System.Drawing.Size(146, 36);
+            this.tarefa.Size = new System.Drawing.Size(195, 44);
             this.tarefa.TabIndex = 27;
             this.tarefa.Text = "Exibir Tarefas";
             this.tarefa.UseVisualStyleBackColor = false;
@@ -108,18 +116,19 @@
             this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::projetoMJM.Properties.Resources.MicrosoftTeams_image__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(674, 366);
+            this.pictureBox1.Location = new System.Drawing.Point(899, 450);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 99);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
             // Buscar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 442);
+            this.ClientSize = new System.Drawing.Size(1028, 534);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tarefa);
             this.Controls.Add(this.dataGridView1);
@@ -127,8 +136,10 @@
             this.Controls.Add(this.codigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(789, 481);
-            this.MinimumSize = new System.Drawing.Size(789, 481);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1046, 581);
+            this.MinimumSize = new System.Drawing.Size(1046, 581);
             this.Name = "Buscar";
             this.Text = "Buscar";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

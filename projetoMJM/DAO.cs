@@ -13,21 +13,21 @@ namespace projetoMJM
 {
     class DAO
     {
-        public MySqlConnection conexao;
-        public string[] nome;
-        public string[] tipo;
-        public string[] descricao;
-        public double[] orcamento;
-        public string[] statu;
-        public string[] integrante;
-        public string[] login;
-        public string[] senha;
-        public string[] tarefa;
-        public string[] integrante1;
-        public string[] stat;
-        public string[] prazo;
-        public int i;
-        public int contador;
+        public MySqlConnection conexao;//Conexao com o banco de dados
+        public string[] nome;//Vetor que guarda o nome
+        public string[] tipo;//Vetor que guarda o tipo
+        public string[] descricao;//Vetor que guarda a descrição
+        public double[] orcamento;//Vetor que guarda o orçamento
+        public string[] statu;//Vetor que guarda o status
+        public string[] integrante;//Vetor que guarda o integrante
+        public string[] login;//Vetor que guarda o login
+        public string[] senha;//Vetor que guarda o senha
+        public string[] tarefa;//Vetor que guarda a tarefa
+        public string[] integrante1;//Vetor que guarda o integrante1 
+        public string[] stat;//Vetor que guarda o status1
+        public string[] prazo;//Vetor que guarda o prazo
+        public int i;//Variavel do Vetor
+        public int contador;//Contador do i
 
         public DAO() 
         {
@@ -76,12 +76,12 @@ namespace projetoMJM
             contador = 0;
             while (leitura.Read())
             {
-                nome[i] = leitura["nome"] + "";
-                tipo[i] = leitura["tipo"] + "";
-                descricao[i] = leitura["descricao"] + "";
-                orcamento[i] = Convert.ToDouble(leitura["orcamento"]);
-                statu[i] = leitura["statu"] + "";
-                integrante[i] = leitura["integrante"] + "";
+                nome[i] = leitura["nome"] + "";//Mostra o dado que deseja pegar
+                tipo[i] = leitura["tipo"] + "";//Mostra o dado que deseja pegar
+                descricao[i] = leitura["descricao"] + "";//Mostra o dado que deseja pegar
+                orcamento[i] = Convert.ToDouble(leitura["orcamento"]);//Mostra o dado que deseja pegar
+                statu[i] = leitura["statu"] + "";//Mostra o dado que deseja pegar
+                integrante[i] = leitura["integrante"] + "";//Mostra o dado que deseja pegar
                 i++;
                 contador++;
             }//Fim do while
@@ -93,7 +93,7 @@ namespace projetoMJM
         public int QuatidadeDados()
         {
             return contador;
-        }//Fim do método
+        }//Fim do método Quantidade de Dados
 
         public string Excluir(int codigo, string nomeTabela)
         {
@@ -101,7 +101,7 @@ namespace projetoMJM
             MySqlCommand sql = new MySqlCommand(query, conexao);
             string resultado = sql.ExecuteNonQuery() + " Excluido";
             return resultado;
-        }//Fim do método
+        }//Fim do método Excluir
 
         public string Atualizar(int codigo, string nomeTabela, string campo, string dado)
         {
@@ -109,7 +109,7 @@ namespace projetoMJM
             MySqlCommand sql = new MySqlCommand(query, conexao);
             string resultado = sql.ExecuteNonQuery() + " Atualizado";
             return resultado;
-        }//fim do método
+        }//fim do método Atualizar
 
         public string Cadastrar(string login, string senha, string nomeTabela)
         {
@@ -117,11 +117,12 @@ namespace projetoMJM
             MySqlCommand sql = new MySqlCommand(cadastrar, conexao);
             string resultado = sql.ExecuteNonQuery() + " Executado";
             return resultado;
-        }
+        }//Fim do método Cadastrar
 
         public void Acessar(string verificaLogin, string verificaSenha, string nomeTabela)
         {
             string acessar = $"select * from {nomeTabela} where login = '{verificaLogin}' and senha = '{verificaSenha}'";
+            //Acessa os dados do banco de dados
 
             //Instanciar
             this.login = new string[100];
@@ -138,8 +139,8 @@ namespace projetoMJM
             contador = 0;
             while (leitura.Read())
             {
-                login[i] = leitura["login"] + "";
-                senha[i] = leitura["senha"] + "";
+                login[i] = leitura["login"] + "";//Mostra o dado que deseja pegar
+                senha[i] = leitura["senha"] + "";//Mostra o dado que deseja pegar
                 i++;
                 contador++;
             }//Fim do while
@@ -154,6 +155,7 @@ namespace projetoMJM
             MySqlCommand sql = new MySqlCommand(cadastrar, conexao);
             string resultado = sql.ExecuteNonQuery() + " Executado";
             return resultado;
+            //Método cadastrar tarefa 
         }
 
         //Método de Busca
@@ -178,18 +180,17 @@ namespace projetoMJM
             contador = 0;
             while (leitura.Read())
             {
-                integrante1[i] = leitura["integrante"] + "";
-                tarefa[i] = leitura["tarefa"] + "";
-                stat[i] = leitura["stat"] + "";
-                prazo[i] = leitura["prazo"] + "";
+                integrante1[i] = leitura["integrante"] + "";//Mostra o dado que deseja pegar
+                tarefa[i] = leitura["tarefa"] + "";//Mostra o dado que deseja pegar
+                stat[i] = leitura["stat"] + "";//Mostra o dado que deseja pegar
+                prazo[i] = leitura["prazo"] + "";//Mostra o dado que deseja pegar
                 i++;
                 contador++;
             }//Fim do while
 
             //Encerrando a comunicaxão
             leitura.Close();
-        }//Fim do método
-
+        }//Fim do método Preencher Tarefa
 
     }//Fim de Classe
 }//Fim do Projeto
