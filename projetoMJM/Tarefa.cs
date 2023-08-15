@@ -49,7 +49,7 @@ namespace projetoMJM
             try
             {
                 //Adiciona dados
-                string result = cone.CadastrarTarefa(codigo.Text, integrante.Text, tarefa1.Text, status.Text, Convert.ToDateTime(prazo.Text), "bancoTarefa");
+                string result = cone.CadastrarTarefa(nome.Text,codigo.Text, integrante.Text, tarefa1.Text, status.Text, Convert.ToDateTime(prazo.Text), "bancoTarefa");
                 MessageBox.Show(result);
             }
             catch (Exception erro)
@@ -64,6 +64,11 @@ namespace projetoMJM
         {
 
         }//Fundo da tela
+
+        private void nome_TextChanged(object sender, EventArgs e)
+        {
+
+        }//Nome Projeto
 
     }//Fim da classe
 }//Fim do projeto

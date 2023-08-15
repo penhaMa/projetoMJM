@@ -43,10 +43,6 @@ namespace projetoMJM
 
         }//Orçamento
 
-        private void status_TextChanged(object sender, EventArgs e)
-        {
-
-        }//Status
 
         private void adicionar_Click(object sender, EventArgs e)
         {
@@ -54,7 +50,7 @@ namespace projetoMJM
             {
                 //Adiciona Dados
                 string result = conectar.Inserir(Convert.ToInt32(codigo.Text),nome.Text, tipo.Text, descricao.Text,
-                                 Convert.ToDouble(orcamento.Text), status.Text, integrante.Text, "projeto"); ; 
+                                 Convert.ToDouble(orcamento.Text), status.Text,Convert.ToDateTime(prazo.Text), integrante.Text, "projeto"); ; 
                 MessageBox.Show(result);
             }
             catch (Exception erro)
@@ -74,6 +70,16 @@ namespace projetoMJM
         {
 
         }//Código
+
+        private void prazo_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }//Prazo
+
+        private void status_TextChanged(object sender, EventArgs e)
+        {
+
+        }//Status
 
     }//Fim da Classe
 }//Fim do Projeto

@@ -34,13 +34,16 @@ namespace projetoMJM
                 if (login1.Text == conectar.login[i] & senha1.Text == conectar.senha[i])//Verifica o login e a senha já cadastrado no banco de dados
                 {
                     MessageBox.Show("Login Bem sucedido");//Se der certo mostra essa mensagem 
+                    this.Hide();
                     areaL.ShowDialog();
+                    
                 }
                 else
                 {
                     MessageBox.Show("Login ou Senha Incorretos");//Se der errado mostra essa mensagem 
                 }
             }//Fim do Método Login
+            
         }//Entrar
 
         private void button2_Click(object sender, EventArgs e)

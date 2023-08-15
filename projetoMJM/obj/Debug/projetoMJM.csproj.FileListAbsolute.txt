@@ -104,3 +104,5 @@ C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Cadastrar
 C:\Users\marcel.rmpenha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.Cadastrar.resources
 C:\Users\marcel.rmpenha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.TelaTarefa.resources
 C:\Users\penha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.TelaTarefa.resources
+C:\Users\marcel.rmpenha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.AtualizarTarefa.resources
+C:\Users\marcel.rmpenha\source\repos\projetoMJM\projetoMJM\obj\Debug\projetoMJM.ExcluirTarefa.resources

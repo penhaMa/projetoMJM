@@ -19,10 +19,12 @@ namespace projetoMJM
         public string[] descricao;//Vetor que guarda a descrição
         public double[] orcamento;//Vetor que guarda o orçamento
         public string[] statu;//Vetor que guarda o status
+        public string[] prazoProjeto;//Vetor que guarda o prazo projeto
         public string[] integrante;//Vetor que guarda o integrante
         public string[] login;//Vetor que guarda o login
         public string[] senha;//Vetor que guarda o senha
         public string[] tarefa;//Vetor que guarda a tarefa
+        public string[] nomeProjeto;//Vetor que guarda o integrante1 
         public string[] integrante1;//Vetor que guarda o integrante1 
         public string[] stat;//Vetor que guarda o status1
         public string[] prazo;//Vetor que guarda o prazo
@@ -35,7 +37,6 @@ namespace projetoMJM
             try
             {
                 conexao.Open();//Abrir a conexão com o banco de dados
-                MessageBox.Show("Conectado");
             }
             catch (Exception erro)
             {
@@ -44,9 +45,9 @@ namespace projetoMJM
         }//Fim da DAO
 
         //Métodos de inserção
-        public string Inserir(int codigo, string nome, string tipo, string descricao, double orcamento, string statu, string integrante,string nomeTabela)
+        public string Inserir(int codigo, string nome, string tipo, string descricao, double orcamento, string statu, DateTime prazo,string integrante,string nomeTabela)
         {
-            string inserir = $"Insert into {nomeTabela}(codigo, nome, tipo, descricao, orcamento, statu, integrante) values('{codigo}','{nome}','{tipo}','{descricao}','{orcamento}','{statu}','{integrante}')";
+            string inserir = $"Insert into {nomeTabela}(codigo, nome, tipo, descricao, orcamento, statu, prazo, integrante) values('{codigo}','{nome}','{tipo}','{descricao}','{orcamento}','{statu}','{prazo}','{integrante}')";
             MySqlCommand sql = new MySqlCommand(inserir, conexao);
             string resultado = sql.ExecuteNonQuery() + " Executado";
             return resultado;
@@ -63,6 +64,7 @@ namespace projetoMJM
             this.descricao = new string[100];
             this.orcamento = new double[100];
             this.statu = new string[100];
+            this.prazoProjeto = new string[100];
             this.integrante = new string[100];
            
 
@@ -81,6 +83,7 @@ namespace projetoMJM
                 descricao[i] = leitura["descricao"] + "";//Mostra o dado que deseja pegar
                 orcamento[i] = Convert.ToDouble(leitura["orcamento"]);//Mostra o dado que deseja pegar
                 statu[i] = leitura["statu"] + "";//Mostra o dado que deseja pegar
+                prazoProjeto[i] = leitura["prazo"] + "";//Mostra o dado que deseja pegar
                 integrante[i] = leitura["integrante"] + "";//Mostra o dado que deseja pegar
                 i++;
                 contador++;
@@ -149,9 +152,9 @@ namespace projetoMJM
             leitura.Close();
         }
 
-        public string CadastrarTarefa(string codigo, string integrante, string tarefa ,string stat, DateTime prazo, string nomeTabela)
+        public string CadastrarTarefa(string nomeProjeto, string codigo, string integrante, string tarefa ,string stat, DateTime prazo, string nomeTabela)
         {
-            string cadastrar = $"Insert into {nomeTabela}(codigo, integrante, tarefa, stat, prazo) values('{codigo}','{integrante}','{tarefa}','{stat}','{prazo}')";
+            string cadastrar = $"Insert into {nomeTabela}(nomeProjeto,codigo, integrante, tarefa, stat, prazo) values('{nomeProjeto}','{codigo}','{integrante}','{tarefa}','{stat}','{prazo}')";
             MySqlCommand sql = new MySqlCommand(cadastrar, conexao);
             string resultado = sql.ExecuteNonQuery() + " Executado";
             return resultado;
@@ -164,6 +167,7 @@ namespace projetoMJM
             string query = $"Select * from {nomeTabela} where codigo = '{codigo}'";
 
             //Instanciar
+            this.nomeProjeto = new string[100];
             this.integrante1 = new string[100];
             this.tarefa = new string[100];
             this.stat = new string[100];
@@ -180,6 +184,7 @@ namespace projetoMJM
             contador = 0;
             while (leitura.Read())
             {
+                nomeProjeto[i] = leitura["nomeProjeto"] + "";//Mostra o dado que deseja pegar
                 integrante1[i] = leitura["integrante"] + "";//Mostra o dado que deseja pegar
                 tarefa[i] = leitura["tarefa"] + "";//Mostra o dado que deseja pegar
                 stat[i] = leitura["stat"] + "";//Mostra o dado que deseja pegar
@@ -191,6 +196,22 @@ namespace projetoMJM
             //Encerrando a comunicaxão
             leitura.Close();
         }//Fim do método Preencher Tarefa
+
+        public string AtualizarTarefa(int codigo, string nomeTabela, string campo, string dado)
+        {
+            string query = $"update {nomeTabela} set {campo} = '{dado}' where codigo = '{codigo}'";
+            MySqlCommand sql = new MySqlCommand(query, conexao);
+            string resultado = sql.ExecuteNonQuery() + " Atualizado";
+            return resultado;
+        }//fim do método Atualizar Tarefa
+
+        public string ExcluirTarefa(int codigo, string nomeTabela)
+        {
+            string query = $"delete from {nomeTabela} where codigo = '{codigo}'";
+            MySqlCommand sql = new MySqlCommand(query, conexao);
+            string resultado = sql.ExecuteNonQuery() + " Excluido";
+            return resultado;
+        }//Fim do método Excluir Tarefa
 
     }//Fim de Classe
 }//Fim do Projeto

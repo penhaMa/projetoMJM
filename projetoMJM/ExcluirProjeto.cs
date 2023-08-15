@@ -13,11 +13,12 @@ namespace projetoMJM
     public partial class ExcluirProjeto : Form
     {
         DAO exc;
-        
+        ExcluirTarefa exclui;
         public ExcluirProjeto()
         {
             InitializeComponent();
             exc = new DAO();//Conecta com a DAO
+            exclui = new ExcluirTarefa();
         }
 
         private void excluir_Click(object sender, EventArgs e)
@@ -30,6 +31,11 @@ namespace projetoMJM
         {
 
         }//Codigo
+
+        private void excluirTarefa_Click(object sender, EventArgs e)
+        {
+            exclui.ShowDialog();
+        }//Excluir Tarefa
 
     }//Fim da Classe
 }//Fim do Projeto

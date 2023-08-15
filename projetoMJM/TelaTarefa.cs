@@ -13,20 +13,23 @@ namespace projetoMJM
     public partial class TelaTarefa : Form
     {
         DAO consul;
+        AtualizarTarefa atu;
         public TelaTarefa()
         {
             consul = new DAO();//Conecta com a DAO
             InitializeComponent();//Instanciar os Componentes
             ConfigurarDataGrid();//Configura o DataGrid
             NomeColunas();//Nomear os títulos das colunas  
+            atu = new AtualizarTarefa();
         }
 
         public void NomeColunas()
         {
-            dataGridView1.Columns[0].Name = "Integrante";//Adiciona um nome a coluna 0
-            dataGridView1.Columns[1].Name = "Tarefa";//Adiciona um nome a coluna 1
-            dataGridView1.Columns[2].Name = "Status";//Adiciona um nome a coluna 2
-            dataGridView1.Columns[3].Name = "Prazo";//Adiciona um nome a coluna 3
+            dataGridView1.Columns[0].Name = "Nome Projeto";//Adiciona um nome a coluna 0
+            dataGridView1.Columns[1].Name = "Integrante";//Adiciona um nome a coluna 1
+            dataGridView1.Columns[2].Name = "Tarefa";//Adiciona um nome a coluna 2
+            dataGridView1.Columns[3].Name = "Status";//Adiciona um nome a coluna 3
+            dataGridView1.Columns[4].Name = "Prazo";//Adiciona um nome a coluna 4
 
         }//Fim do método consultar
 
@@ -37,7 +40,7 @@ namespace projetoMJM
             dataGridView1.AllowUserToResizeColumns = false;//Redimensionar Colunas
             dataGridView1.AllowUserToResizeRows = false;//Redimensionar Linhas
 
-            dataGridView1.ColumnCount = 4;//Quantidade de Colunas
+            dataGridView1.ColumnCount = 5;//Quantidade de Colunas
         }
 
         public void AdicionarDados()
@@ -45,7 +48,7 @@ namespace projetoMJM
             consul.PreencherTarefa(Convert.ToInt32(codigo.Text), "bancoTarefa");
             for (int i = 0; i < consul.QuatidadeDados(); i++)
             {
-                dataGridView1.Rows.Add(consul.integrante1[i], consul.tarefa[i], consul.stat[i], consul.prazo[i]);
+                dataGridView1.Rows.Add(consul.nomeProjeto[i],consul.integrante1[i], consul.tarefa[i], consul.stat[i], consul.prazo[i]);
             }//Adicionando dados no dataGridView1
         }//Fim do método
         private void codigo_TextChanged(object sender, EventArgs e)
@@ -62,6 +65,11 @@ namespace projetoMJM
         {
             AdicionarDados();
         }//Buscar
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            atu.ShowDialog();
+        }//Atualizar Tarefa
 
     }//Fim da Classe
 }//Fim do Projeto

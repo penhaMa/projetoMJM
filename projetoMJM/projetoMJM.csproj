@@ -113,6 +113,12 @@
     <Compile Include="AdicionarProjeto.Designer.cs">
       <DependentUpon>AdicionarProjeto.cs</DependentUpon>
     </Compile>
+    <Compile Include="AtualizarTarefa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtualizarTarefa.Designer.cs">
+      <DependentUpon>AtualizarTarefa.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO.cs" />
     <Compile Include="ExcluirProjeto.cs">
       <SubType>Form</SubType>
@@ -131,6 +137,12 @@
     </Compile>
     <Compile Include="Cadastrar.Designer.cs">
       <DependentUpon>Cadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirTarefa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirTarefa.Designer.cs">
+      <DependentUpon>ExcluirTarefa.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -164,6 +176,9 @@
     <EmbeddedResource Include="AdicionarProjeto.resx">
       <DependentUpon>AdicionarProjeto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AtualizarTarefa.resx">
+      <DependentUpon>AtualizarTarefa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExcluirProjeto.resx">
       <DependentUpon>ExcluirProjeto.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastrar.resx">
       <DependentUpon>Cadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirTarefa.resx">
+      <DependentUpon>ExcluirTarefa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -217,6 +235,93 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MicrosoftTeams-image %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %283%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jhtguuk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %283%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %284%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %287%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2810%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2812%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2812%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2812%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2811%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2816%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %2817%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

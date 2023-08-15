@@ -30,7 +30,8 @@ namespace projetoMJM
             dataGridView1.Columns[2].Name = "Descrição";//Adiciona um nome a coluna 2
             dataGridView1.Columns[3].Name = "Orçamento";//Adiciona um nome a coluna 3
             dataGridView1.Columns[4].Name = "Status";//Adiciona um nome a coluna 4
-            dataGridView1.Columns[5].Name = "Integrante";//Adiciona um nome a coluna 5
+            dataGridView1.Columns[5].Name = "Prazo";//Adiciona um nome a coluna 5
+            dataGridView1.Columns[6].Name = "Integrante";//Adiciona um nome a coluna 6
 
         }//Fim do método consultar
 
@@ -41,7 +42,7 @@ namespace projetoMJM
             dataGridView1.AllowUserToResizeColumns = false;//Redimensionar Colunas
             dataGridView1.AllowUserToResizeRows = false;//Redimensionar Linhas
 
-            dataGridView1.ColumnCount = 6;//Número de Colunas
+            dataGridView1.ColumnCount = 7;//Número de Colunas
         }
 
         public void AdicionarDados()
@@ -49,7 +50,7 @@ namespace projetoMJM
             consul.PreencherVetor(Convert.ToInt32(codigo.Text), "projeto");
             for (int i = 0; i < consul.QuatidadeDados(); i++)
             {
-                dataGridView1.Rows.Add(consul.nome[i], consul.tipo[i], consul.descricao[i], consul.orcamento[i], consul.statu[i], consul.integrante[i]);
+                dataGridView1.Rows.Add(consul.nome[i], consul.tipo[i], consul.descricao[i], consul.orcamento[i], consul.statu[i], consul.prazoProjeto[i], consul.integrante[i]);
             }//Adicionando dados no dataGridView1
         }//Fim do método
 

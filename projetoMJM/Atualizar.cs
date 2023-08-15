@@ -56,14 +56,20 @@ namespace projetoMJM
             atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "descricao", descricao.Text);//Atualiza a descrição
             atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "orcamento", orcamento.Text);//Atualiza o orçamento
             atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "statu", status.Text);//Atualiza o status
+            atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "prazo", prazo.Text);//Atualiza o prazo
             atu.Atualizar(Convert.ToInt32(codigo.Text), "projeto", "integrante", integrante.Text);//Atualiza o integrante
             MessageBox.Show("Dados Atualizados com Sucesso!");//Mensagem para o úsuario 
-        }
+        }//Atualizar
 
         private void codigo_TextChanged(object sender, EventArgs e)
         {
 
         }//Código
+
+        private void prazo_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }//Prazo
 
     }//Fim da Classe
 }//Fim do Projeto
